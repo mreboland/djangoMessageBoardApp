@@ -6,3 +6,5 @@ from .models import Post
 class HomePageView(ListView):
     model = Post
     template_name = "home.html"
+    # context_object... allows us to give a custom name to views when acessing them in our templates (see home.html)
+    context_object_name = "all_posts_list"

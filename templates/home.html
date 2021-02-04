@@ -1,0 +1,12 @@
+{% comment %} ListView automatically returns to us a context variable called object_list which we can loop over. {% endcomment %}
+
+<h1>Message board homepage</h1>
+<ul>
+    {% comment %} Basic for loop to loop over the posts in our db {% endcomment %}
+    {% comment %} object_list can be given an explicit name via context_object_name attribute in our views.py {% endcomment %}
+    {% for post in all_posts_list %}
+        <li>
+            {{ post.text }}
+        </li>
+    {% endfor %}
+</ul>
